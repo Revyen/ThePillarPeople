@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 4950797978983088}
   - component: {fileID: 114997041863567612}
   m_Layer: 0
-  m_Name: CookieModel
+  m_Name: CookieModel 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
