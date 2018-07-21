@@ -7,10 +7,13 @@ public class rotate : MonoBehaviour {
     public float rotationalSpeed;
     public float movementSpeed;
     public float range;
+    int counter;
+    TextMesh tcounter;
 
 	// Use this for initialization
 	void Start () {
         rotationalSpeed = 10;
+        tcounter = GameObject.FindGameObjectWithTag("counter").GetComponent<TextMesh>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +23,12 @@ public class rotate : MonoBehaviour {
         transform.position = new Vector3(pos.x, newY * range, pos.z);
         transform.Rotate(Vector3.forward * rotationalSpeed * Time.deltaTime);
 	}
+
+    private void OnMouseDown()
+    {
+        counter++;
+        tcounter.text = "" + counter;
+    }
 
 
     //transform.Translate(new Vector3(0, 1, 0) * Mathf.Sin(1) * rotationalSpeed * Time.deltaTime,Space.World);
