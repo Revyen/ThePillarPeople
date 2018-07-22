@@ -10,12 +10,14 @@ public class rotate : MonoBehaviour {
     int counter;
     TextMesh tcounter;
     ParticleSystem particles;
+    public Animator a;
 
 	// Use this for initialization
 	void Start () {
         rotationalSpeed = 10;
         tcounter = GameObject.FindGameObjectWithTag("counter").GetComponent<TextMesh>();
         particles = GameObject.FindGameObjectWithTag("particles").GetComponent<ParticleSystem>();
+        a = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -29,6 +31,12 @@ public class rotate : MonoBehaviour {
     private void OnMouseDown()
     {
         changeCounter(1);
+
+        if(a != null)
+        {
+            a.Play("Clicked");
+        }
+        
         // Emit 1 cookie-particle when the big cookie is clicked
         particles.Emit(1);
     }
