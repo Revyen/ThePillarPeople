@@ -28,11 +28,28 @@ public class rotate : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        counter++;
-        tcounter.text = "" + counter;
-
+        changeCounter(1);
         // Emit 1 cookie-particle when the big cookie is clicked
         particles.Emit(1);
+    }
+
+    public void changeCounter(int Amount)
+    {
+        if(Amount < 0)
+        {
+            if(counter >= -Amount)
+            {
+                counter += Amount;
+                tcounter.text = "" + counter;
+            }
+        } else
+        {
+            counter += Amount;
+            tcounter.text = "" + counter;
+        }
+            
+        
+
     }
 
 
