@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - particles
+  - mainCookie
+  - counter
+  - button
+  - spawner
   layers:
   - Default
   - TransparentFX
@@ -15,6 +20,7 @@ TagManager:
   - 
   - PostProcessing
   - 
+  - Invisible
   - 
   - 
   - 
@@ -35,8 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Spatial Mapping
   m_SortingLayers:
   - name: Default
     uniqueID: 0
